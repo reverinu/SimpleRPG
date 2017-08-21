@@ -5,9 +5,9 @@ using UnityEngine;
 /*
  * オブジェクト基底クラス
  */
-public class Object {
+public class GameObject : MonoBehaviour {
 
     /* 名前 */
-    [SerializeField] private string name;
-	
+    [SerializeField] private string Name;
+    
 }

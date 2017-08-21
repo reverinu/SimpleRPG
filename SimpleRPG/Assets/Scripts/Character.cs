@@ -2,7 +2,11 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Character : Object {
+/*
+ * キャラクタークラス
+ */
+public class Character : GameObject {
 
-	
+    /* 年齢 */
+    [SerializeField] private int age;
 }
