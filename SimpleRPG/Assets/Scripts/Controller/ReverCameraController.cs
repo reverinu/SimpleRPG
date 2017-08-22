@@ -10,6 +10,11 @@ public class ReverCameraController : MonoBehaviour {
     {
         targetObj = GameObject.FindWithTag( "Player" );
         targetPos = targetObj.transform.position;
+
+        // マウスの表示or非表示
+        Cursor.visible = false;
+        // カーソルの固定
+        Cursor.lockState = CursorLockMode.Locked;
     }
 
     void Update()
@@ -19,7 +24,7 @@ public class ReverCameraController : MonoBehaviour {
         targetPos = targetObj.transform.position;
 
         // マウスの右クリックを押している間
-        if (Input.GetMouseButton( 1 )) {
+        //if (Input.GetMouseButton( 1 )) {
             // マウスの移動量
             float mouseInputX = Input.GetAxis( "Mouse X" );
             float mouseInputY = Input.GetAxis( "Mouse Y" );
@@ -27,6 +32,6 @@ public class ReverCameraController : MonoBehaviour {
             transform.RotateAround( targetPos, Vector3.up, mouseInputX * Time.deltaTime * 200f );
             // カメラの垂直移動（※角度制限なし、必要が無ければコメントアウト）
             //transform.RotateAround( targetPos, transform.right, mouseInputY * Time.deltaTime * 200f );
-        }
+        //}
     }
 }
