@@ -105,7 +105,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 734381071eec7c741adb18f1daaf4c19, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _name: 
-  _position: {x: 0, y: 0, z: 0}
+  _name: cube
+  _position: {x: 277, y: 1, z: 220}
   HasAction: 1
   Message: hellooooooooooooooooooooooooooooo!!\nwow

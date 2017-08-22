@@ -4,15 +4,19 @@ using UnityEngine;
 
 public class ReverGameManager : MonoBehaviour {
 
-    public static GameObject Player;
-    public static GameObject[] Ornaments;
+    public GameObject Player;
+    public GameObject[] Ornaments;
     
 
 	// Use this for initialization
-	void Start () {
-		// 初期化
+	void Awake () {
+        // 初期化
         // オブジェクト配置
         // スタートするものはスタートさせておく
+        Instantiate(Player);
+        for ( int i = 0; i < Ornaments.Length; i++ ) {
+            Instantiate(Ornaments[i]);
+        }
 	}
 	
 	// Update is called once per frame
