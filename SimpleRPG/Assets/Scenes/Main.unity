@@ -450,46 +450,9 @@ Prefab:
       propertyPath: m_RootOrder
       value: 5
       objectReference: {fileID: 0}
-    - target: {fileID: 114838765752335516, guid: eb00618ee0f140f4daaa26983cadae18,
-        type: 2}
-      propertyPath: Name
-      value: rever
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: eb00618ee0f140f4daaa26983cadae18, type: 2}
   m_IsPrefabParent: 0
---- !u!1 &901581922 stripped
-GameObject:
-  m_PrefabParentObject: {fileID: 1489921158101004, guid: eb00618ee0f140f4daaa26983cadae18,
-    type: 2}
-  m_PrefabInternal: {fileID: 901581921}
---- !u!114 &901581923
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 901581922}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8ccfe8150be676841809886e3c2f2eb1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Speed: 10
---- !u!54 &901581924
-Rigidbody:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 901581922}
-  serializedVersion: 2
-  m_Mass: 1
-  m_Drag: 0
-  m_AngularDrag: 0.05
-  m_UseGravity: 1
-  m_IsKinematic: 0
-  m_Interpolate: 0
-  m_Constraints: 112
-  m_CollisionDetection: 0
 --- !u!1 &1019753910
 GameObject:
   m_ObjectHideFlags: 0
