@@ -8,6 +8,14 @@ using UnityEngine;
 public class GameObject : MonoBehaviour {
 
     /* 名前 */
-    [SerializeField] private string Name;
-    
+    [SerializeField] private string _name;
+    public string Name {
+        get { return this._name; }
+        protected set { this._name = value; }
+    }
+
+    private void Start() {
+        this.Name = _name;
+    }
+
 }

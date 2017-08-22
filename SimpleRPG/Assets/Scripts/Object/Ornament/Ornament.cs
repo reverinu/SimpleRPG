@@ -8,5 +8,15 @@ using UnityEngine;
  */
 public class Ornament : GameObject {
     /* 設置位置 */
-    [SerializeField] private Vector3 Position;
+    [SerializeField] private Vector3 _position;
+    public Vector3 Position
+    {
+        get { return this._position; }
+        protected set { this._position = value; }
+    }
+
+    private void Start()
+    {
+        this.Position = _position;
+    }
 }
