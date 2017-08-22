@@ -15,8 +15,13 @@ public class Ornament : ReverObject {
         protected set { this._position = value; }
     }
 
+    public bool HasAction;
+    public string Message = null;
+
     private void Start()
     {
         this.Position = _position;
     }
+
+
 }
