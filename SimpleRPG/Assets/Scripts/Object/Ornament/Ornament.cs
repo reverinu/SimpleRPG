@@ -6,7 +6,7 @@ using UnityEngine;
  * 
  * 置物クラス
  */
-public class Ornament : GameObject {
+public class Ornament : ReverObject {
     /* 設置位置 */
     [SerializeField] private Vector3 _position;
     public Vector3 Position

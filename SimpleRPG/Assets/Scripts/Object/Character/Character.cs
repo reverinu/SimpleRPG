@@ -5,7 +5,7 @@ using UnityEngine;
 /*
  * キャラクタークラス
  */
-public class Character : GameObject {
+public class Character : ReverObject {
 
     /* 年齢 */
     [SerializeField] private int _age;

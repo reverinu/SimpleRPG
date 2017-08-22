@@ -13,22 +13,22 @@ public class Player : Character {
     public int Hp
     {
         get { return this._hp; }
-        protected set { this._hp = value; }
+        set { this._hp = value; }
     }
     public int Mp
     {
         get { return this._mp; }
-        protected set { this._mp = value; }
+        set { this._mp = value; }
     }
     public int Atk
     {
         get { return this._atk; }
-        protected set { this._atk = value; }
+        set { this._atk = value; }
     }
     public int Def
     {
         get { return this._def; }
-        protected set { this._def = value; }
+        set { this._def = value; }
     }
 
     private void Start()

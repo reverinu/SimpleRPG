@@ -5,7 +5,7 @@ using UnityEngine;
 /*
  * オブジェクト基底クラス
  */
-public class GameObject : MonoBehaviour {
+public class ReverObject : MonoBehaviour {
 
     /* 名前 */
     [SerializeField] private string _name;
