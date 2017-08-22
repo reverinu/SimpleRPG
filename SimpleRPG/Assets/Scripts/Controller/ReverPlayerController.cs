@@ -2,6 +2,9 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+/*
+ * プレイヤーコントローラー
+ */
 public class ReverPlayerController : MonoBehaviour
 {
     public float Speed = 10f;
@@ -13,6 +16,10 @@ public class ReverPlayerController : MonoBehaviour
 
     // Update is called once per frame
     void FixedUpdate(){
+        MovePlayer();
+    }
+
+    private void MovePlayer(){
         float moveHorizontal = Input.GetAxisRaw( "Horizontal" );
         float moveVertical = Input.GetAxisRaw( "Vertical" );
 

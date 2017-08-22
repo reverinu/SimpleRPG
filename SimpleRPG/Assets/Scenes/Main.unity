@@ -424,7 +424,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4833481802397598, guid: eb00618ee0f140f4daaa26983cadae18, type: 2}
       propertyPath: m_LocalPosition.y
-      value: 97
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 4833481802397598, guid: eb00618ee0f140f4daaa26983cadae18, type: 2}
       propertyPath: m_LocalPosition.z
@@ -449,6 +449,21 @@ Prefab:
     - target: {fileID: 4833481802397598, guid: eb00618ee0f140f4daaa26983cadae18, type: 2}
       propertyPath: m_RootOrder
       value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 23870612101705816, guid: eb00618ee0f140f4daaa26983cadae18,
+        type: 2}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: fcb13d349a7e8254e9fe0000111c68d4, type: 2}
+    - target: {fileID: 54849646435707082, guid: eb00618ee0f140f4daaa26983cadae18,
+        type: 2}
+      propertyPath: m_Drag
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114596145559459800, guid: eb00618ee0f140f4daaa26983cadae18,
+        type: 2}
+      propertyPath: Speed
+      value: 30
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: eb00618ee0f140f4daaa26983cadae18, type: 2}
@@ -489,7 +504,7 @@ Terrain:
   m_Enabled: 1
   serializedVersion: 3
   m_TerrainData: {fileID: 15600000, guid: 804a8ba87f0b6cb468e97aae6f3213ab, type: 2}
-  m_TreeDistance: 5000
+  m_TreeDistance: 2000
   m_TreeBillboardDistance: 50
   m_TreeCrossFadeLength: 5
   m_TreeMaximumFullLODCount: 50
