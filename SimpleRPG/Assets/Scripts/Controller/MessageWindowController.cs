@@ -46,7 +46,7 @@ public class MessageWindowController : MonoBehaviour {
     }
 
     private IEnumerator MessageLoop(){
-        for (;;) {
+        while ( true ) {
             if ( ( !IsMessage && Input.GetKeyDown( KeyCode.Space ) ) || _isFirstMessage ) {
                 IsMessage = true;
                 _isFirstMessage = false;

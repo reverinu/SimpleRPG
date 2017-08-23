@@ -20,7 +20,7 @@ public class ReverGameManager : MonoBehaviour {
             Instantiate(Ornaments[i]);
         }
         MesWinController = Canvas.GetComponent<MessageWindowController>();
-        MesWinController.StartMessageWindow("aaaaaaaaaaaa\\wwwwwwwwwwww");
+        MesWinController.StartMessageWindow("私はある日、トイレに向かった\nしかし、トイレはなかったのだ\\私は嘆いた。どうして、トイレがないのか、嘆いたのだ\\だが、嘆いたところで結果は変わらなかった。END...");
 
 	}
 	
