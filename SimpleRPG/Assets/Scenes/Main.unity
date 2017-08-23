@@ -399,6 +399,7 @@ MonoBehaviour:
   IsMessageLoop: 0
   IsMessage: 0
   IsMessageEnd: 0
+  n: \n
 --- !u!1 &746689567
 GameObject:
   m_ObjectHideFlags: 0
@@ -442,6 +443,7 @@ MonoBehaviour:
   Player: {fileID: 1489921158101004, guid: eb00618ee0f140f4daaa26983cadae18, type: 2}
   Ornaments:
   - {fileID: 1060786786710090, guid: b0fe44539d8d94b4ca32ff9b97309426, type: 2}
+  - {fileID: 1148885117971526, guid: fbf219f23bc59c54c8c0d048d6444f8b, type: 2}
   Canvas: {fileID: 667895783}
 --- !u!1 &1019753910
 GameObject:

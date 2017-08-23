@@ -14,12 +14,14 @@ public class MessageWindowController : MonoBehaviour {
     public bool IsMessage;
     public bool IsMessageEnd;
     private bool _isFirstMessage;
+    [SerializeField] private string n;
 
     public void StartMessageWindow( string text ){
         _isFirstMessage = true;
         IsMessageLoop = true;
         MessageWindow.SetActive( true );
         _splitNum = 0;
+        text = ReplaceText(text, "\n", n );
         SplitText( text );
         StartCoroutine( "MessageLoop" );
     }
@@ -41,11 +43,20 @@ public class MessageWindowController : MonoBehaviour {
     private void RemoveText(){
         MessageText.GetComponent<Text>().text = null;
     }
+    /*
+     * 文字の置き換え.\nがおかしなことになって改行されないので用意した
+     */
+    private string ReplaceText( string text, string replaceText, string targetText ) {
+        System.Text.StringBuilder sb = new System.Text.StringBuilder( text );
+        sb.Replace( targetText, replaceText );
+        string result = sb.ToString();
+        return result;
+    }
     private void SplitText( string text ){
-        // TODO: ここ直しておく
-        _splitText = text.Split( "\\"[0] );
+        _splitText = text.Split( "#"[0] );
         _maxSplitNum = _splitText.Length;
     }
+    
 
     private IEnumerator MessageLoop(){
         while ( true ) {
