@@ -396,6 +396,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   MessageWindow: {fileID: 1512632905}
   MessageText: {fileID: 1902533050}
+  IsMessageLoop: 0
   IsMessage: 0
   IsMessageEnd: 0
 --- !u!1 &746689567

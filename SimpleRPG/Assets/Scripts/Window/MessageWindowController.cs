@@ -10,12 +10,14 @@ public class MessageWindowController : MonoBehaviour {
     private int _maxSplitNum;
     [SerializeField] private GameObject MessageWindow;
     [SerializeField] private GameObject MessageText;
+    public bool IsMessageLoop;
     public bool IsMessage;
     public bool IsMessageEnd;
     private bool _isFirstMessage;
 
     public void StartMessageWindow( string text ){
         _isFirstMessage = true;
+        IsMessageLoop = true;
         MessageWindow.SetActive( true );
         _splitNum = 0;
         SplitText( text );
@@ -57,6 +59,7 @@ public class MessageWindowController : MonoBehaviour {
             }
             if ( IsMessageEnd ) {
                 IsMessageEnd = false;
+                IsMessageLoop = false;
                 EndMessageWindow();
                 StopCoroutine( "MessageLoop" );
             }

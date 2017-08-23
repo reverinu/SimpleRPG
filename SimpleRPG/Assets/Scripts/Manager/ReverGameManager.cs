@@ -1,13 +1,15 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class ReverGameManager : MonoBehaviour {
 
     public GameObject Player;
     public GameObject[] Ornaments;
     public GameObject Canvas;
-    MessageWindowController MesWinController;
+    private MessageWindowController MesWinController;
+    private ReverCollisionChecker CollisionChecker;
     
 
 	// Use this for initialization
@@ -15,17 +17,22 @@ public class ReverGameManager : MonoBehaviour {
         // 初期化
         // オブジェクト配置
         // スタートするものはスタートさせておく
-        Instantiate(Player);
+        Instantiate( Player );
         for ( int i = 0; i < Ornaments.Length; i++ ) {
-            Instantiate(Ornaments[i]);
+            Instantiate( Ornaments[i], Ornaments[i].GetComponent<Ornament>().Position, Quaternion.identity );
         }
         MesWinController = Canvas.GetComponent<MessageWindowController>();
-        MesWinController.StartMessageWindow("私はある日、トイレに向かった\nしかし、トイレはなかったのだ\\私は嘆いた。どうして、トイレがないのか、嘆いたのだ\\だが、嘆いたところで結果は変わらなかった。END...");
-
+        CollisionChecker = GameObject.FindWithTag("Player").GetComponent<ReverCollisionChecker>();
 	}
 	
 	// Update is called once per frame
 	void Update () {
-		
+        if ( CollisionChecker.IsCollisionOrnament ) {
+            if ( Input.GetKeyDown( KeyCode.Space ) && !MesWinController.IsMessageLoop ) {
+                MesWinController.StartMessageWindow( CollisionChecker.CollisionOrnament.Message );
+            }
+        }
 	}
+
+    
 }
